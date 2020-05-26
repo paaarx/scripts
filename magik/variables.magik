@@ -1,0 +1,31 @@
+_block
+
+    _local local_variable << "a"
+    _global global_variable << "b"
+
+_endblock
+$
+
+_block
+
+    # You cannot do this because this variable only exists in local scope (the previous block)
+    # write(local_variable)
+
+    # You can do this because it is a global variable and exists outside the previous block
+    write(global_variable)
+
+_endblock
+$
+
+_block
+
+    # Magik has dynamic type, you can set a variable a text value and then set a numeric
+
+    _local my_var << "Hello World"
+    write("my_var: ", my_var)
+
+    my_var << 1
+    write("my_var: ", my_var)
+
+_endblock
+$
