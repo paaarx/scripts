@@ -1,0 +1,17 @@
+# Without @
+_global my_proc1 <<
+_proc(param1, _optional param2)
+
+	# your code here
+
+_endproc
+$
+
+# With @
+_global my_proc2 <<
+_proc @my_proc2(param1, _optional param2)
+
+	# your code here
+
+_endproc
+$
